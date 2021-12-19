@@ -10,6 +10,13 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     private String title;
     private String isbn;
@@ -71,6 +78,15 @@ public class Book {
 
     public Publisher getPublisher() {
         return publisher;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                '}';
     }
 
     public void setPublisher(Publisher publisher) {
